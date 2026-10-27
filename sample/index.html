@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#10302E">
+<title>北一ヴェネツィア美術館｜小樽・堺町でヴェネツィアガラスの世界へ</title>
+<meta name="description" content="小樽・堺町にある北一ヴェネツィア美術館。1988年設立、約3000点のヴェネツィアガラスと調度品を収蔵。レースガラスやムラノガラスの逸品に出会えます。年中無休。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lagoon:#10302E;
+  --lagoon-2:#1B4541;
+  --ivory:#F2EADB;
+  --paper:#E9DFCB;
+  --gold:#B38B4D;
+  --gold-light:#D6B574;
+  --oxblood:#6E1F2B;
+  --ink:#231D19;
+  --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP","Noto Serif CJK JP",serif;
+  --latin:"Cormorant Garamond","Shippori Mincho","Hiragino Mincho ProN",Georgia,serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--ivory);color:var(--ink);
+  font-family:var(--serif);font-size:16px;line-height:1.95;letter-spacing:.04em;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;min-height:100vh;min-height:100svh;
+  background:var(--lagoon);color:var(--ivory);
+  display:flex;align-items:flex-end;overflow:hidden;
+  padding:0 max(24px,env(safe-area-inset-right)) calc(56px + env(safe-area-inset-bottom)) max(24px,env(safe-area-inset-left));
+}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:
+    linear-gradient(180deg,rgba(16,48,46,.55) 0%,rgba(16,48,46,.05) 30%,rgba(16,48,46,.35) 60%,rgba(16,48,46,.92) 100%);
+}
+.hero-frame{
+  position:absolute;z-index:2;pointer-events:none;
+  inset:calc(14px + env(safe-area-inset-top)) 14px calc(14px + env(safe-area-inset-bottom)) 14px;
+  border:1px solid rgba(214,181,116,.7);
+}
+.hero-frame::after{
+  content:"";position:absolute;inset:5px;border:1px solid rgba(214,181,116,.35);
+}
+.hero-inner{position:relative;z-index:3;width:100%;max-width:960px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+.hero-copy{flex:1;min-width:0}
+.hero-latin{
+  font-family:var(--latin);font-style:italic;font-weight:500;
+  font-size:clamp(17px,4.6vw,22px);letter-spacing:.06em;line-height:1.5;color:var(--gold-light);margin:0 0 14px;
+}
+.hero-lead{font-size:clamp(15px,4.2vw,18px);line-height:2.05;margin:0 0 28px;max-width:19em}
+.hero-cta{
+  display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;
+  border:1px solid var(--gold-light);color:var(--ivory);text-decoration:none;
+  font-size:15px;letter-spacing:.12em;background:rgba(16,48,46,.35);
+  -webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);
+}
+.hero-title{
+  margin:0;writing-mode:vertical-rl;-webkit-writing-mode:vertical-rl;
+  font-weight:600;font-size:clamp(26px,8.2vw,46px);line-height:1.35;letter-spacing:.22em;
+  color:var(--ivory);text-shadow:0 2px 18px rgba(0,0,0,.45);
+  padding-top:calc(40px + env(safe-area-inset-top));
+  align-self:flex-start;
+  animation:titleIn 1.6s ease-out .2s both;
+}
+@keyframes titleIn{from{opacity:0;letter-spacing:.5em}to{opacity:1;letter-spacing:.22em}}
+
+/* ---------- common ---------- */
+section{padding:84px max(24px,env(safe-area-inset-right)) 84px max(24px,env(safe-area-inset-left))}
+.wrap{max-width:720px;margin:0 auto}
+.wrap.wide{max-width:960px}
+h2{
+  font-weight:600;font-size:clamp(23px,6.4vw,32px);line-height:1.6;letter-spacing:.1em;margin:0 0 28px;text-align:center;
+}
+h2::after{
+  content:"";display:block;width:56px;height:1px;background:var(--gold);margin:22px auto 0;
+  box-shadow:0 0 0 0 var(--gold);
+}
+.lozenge{display:block;width:12px;height:12px;margin:0 auto 22px;background:var(--gold);transform:rotate(45deg)}
+p{margin:0 0 1.4em}
+.frame{
+  position:relative;background:var(--paper);
+  box-shadow:0 0 0 7px var(--ivory),0 0 0 8px var(--gold);
+}
+.frame img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- about ---------- */
+.about{background:var(--ivory)}
+.about-grid{display:grid;gap:44px;align-items:center}
+.arch{
+  width:min(78%,340px);margin:0 auto;aspect-ratio:4/5;
+  border-radius:999px 999px 0 0;overflow:hidden;
+}
+.arch img{width:100%;height:100%;object-fit:cover}
+.about-text p:last-child{margin-bottom:0}
+.about-facts{
+  display:flex;flex-wrap:wrap;gap:0;margin:34px 0 0;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);
+}
+.about-facts div{flex:1 1 50%;padding:18px 8px;text-align:center}
+.about-facts div+div{border-left:1px solid rgba(179,139,77,.55)}
+.about-facts dt{font-size:13px;letter-spacing:.14em;color:var(--oxblood);margin:0 0 2px}
+.about-facts dd{margin:0;font-family:var(--latin);font-size:34px;line-height:1.3;letter-spacing:.04em}
+.about-facts dd small{font-family:var(--serif);font-size:14px;letter-spacing:.08em;margin-left:3px}
+
+/* ---------- strengths ---------- */
+.strength{background:var(--paper)}
+.strength-photo{aspect-ratio:3/2;margin:0 0 48px}
+.points{list-style:none;margin:0;padding:0;display:grid;gap:30px}
+.points li{position:relative;padding-left:34px}
+.points li::before{
+  content:"";position:absolute;left:4px;top:.78em;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);
+}
+.points h3{font-size:18px;font-weight:600;letter-spacing:.08em;line-height:1.7;margin:0 0 4px;color:var(--oxblood)}
+.points p{margin:0;font-size:15px;line-height:1.95}
+
+/* ---------- recommend ---------- */
+.recommend{background:var(--lagoon);color:var(--ivory);text-align:center}
+.recommend .lozenge{background:var(--gold-light)}
+.recommend h2::after{background:var(--gold-light)}
+.recommend .big{
+  font-size:clamp(19px,5.4vw,25px);line-height:2.1;letter-spacing:.08em;margin:0 0 30px;
+}
+.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.tags li{
+  border:1px solid var(--gold-light);padding:6px 20px;min-height:40px;display:flex;align-items:center;
+  font-size:15px;letter-spacing:.14em;color:var(--gold-light);
+}
+
+/* ---------- reviews ---------- */
+.reviews{background:var(--ivory)}
+.review{
+  position:relative;margin:0 0 28px;padding:34px 26px 26px;background:var(--paper);
+  border-left:3px solid var(--oxblood);
+}
+.review:nth-of-type(2){border-left:0;border-right:3px solid var(--gold)}
+.stars{font-size:19px;letter-spacing:.12em;color:var(--gold);margin:0 0 10px;line-height:1.4}
+.stars .off{color:rgba(179,139,77,.35)}
+.review blockquote{margin:0;font-size:15.5px;line-height:2}
+.review blockquote p{margin:0 0 .8em}
+.review blockquote p:last-child{margin-bottom:0}
+.review-note{font-size:13px;line-height:1.8;color:#5b5047;margin:6px 0 0;text-align:center}
+
+/* ---------- info ---------- */
+.info{background:var(--paper)}
+.info-list{margin:0;border-top:1px solid var(--gold)}
+.info-list>div{display:grid;grid-template-columns:6.5em 1fr;gap:12px;padding:16px 4px;border-bottom:1px solid rgba(179,139,77,.55)}
+.info-list dt{font-size:14px;letter-spacing:.12em;color:var(--oxblood);line-height:1.9}
+.info-list dd{margin:0;line-height:1.9;overflow-wrap:anywhere;word-break:break-word}
+.info-list a{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+.info-list a.tel{display:inline-block;padding:2px 0}
+.mail{font-size:14px;letter-spacing:0;overflow-wrap:normal;word-break:normal}
+.note{font-size:13px;line-height:1.85;color:#5b5047;margin:22px 0 0}
+
+/* ---------- access ---------- */
+.access{background:var(--ivory)}
+.addr{text-align:center;margin:0 0 28px;line-height:1.9}
+.map{aspect-ratio:4/3;max-height:420px;width:100%;background:var(--paper);overflow:hidden}
+.map iframe{display:block;width:100%;height:100%;border:0}
+.map-btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:56px;margin-top:22px;
+  background:var(--oxblood);color:var(--ivory);text-decoration:none;
+  font-size:16px;letter-spacing:.14em;border:1px solid var(--gold);box-shadow:inset 0 0 0 3px var(--oxblood),inset 0 0 0 4px rgba(214,181,116,.7);
+}
+.map-btn svg{width:20px;height:20px;flex:none}
+.links{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:26px}
+.links a{
+  flex:1 1 200px;max-width:320px;
+  display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;
+  border:1px solid var(--gold);text-decoration:none;font-size:15px;letter-spacing:.1em;
+}
+
+/* ---------- footer ---------- */
+footer{
+  background:var(--lagoon);color:var(--ivory);text-align:center;
+  padding:56px 24px calc(40px + env(safe-area-inset-bottom));
+}
+.f-name{font-size:19px;font-weight:600;letter-spacing:.2em;margin:0 0 4px}
+.f-latin{font-family:var(--latin);font-style:italic;color:var(--gold-light);font-size:17px;letter-spacing:.08em;margin:0 0 26px}
+.sns{display:flex;justify-content:center;margin:0 0 28px}
+.sns a{
+  width:52px;height:52px;border:1px solid var(--gold-light);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;color:var(--gold-light);
+}
+.sns svg{width:24px;height:24px}
+.copy{font-size:12px;letter-spacing:.1em;color:rgba(242,234,219,.65);margin:0}
+
+/* ---------- larger screens ---------- */
+@media (min-width:760px){
+  body{font-size:17px}
+  section{padding:112px 40px}
+  .hero{padding-bottom:80px}
+  .hero-latin{font-size:24px}
+  .about-grid{grid-template-columns:5fr 6fr;gap:64px}
+  .arch{width:100%}
+  .points{grid-template-columns:repeat(3,1fr);gap:36px}
+  .reviews .wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .reviews .wrap>h2,.reviews .wrap>.lozenge,.reviews .wrap>.review-note{grid-column:1/-1}
+  .review{margin:0}
+  .info-list>div{grid-template-columns:9em 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-title{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="hero-img" src="images/1.jpg" alt="夕暮れの小樽・堺町通りに建つ、石造りの北一ヴェネツィア美術館の外観" width="1600" height="900" fetchpriority="high">
+  <div class="hero-frame" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-latin">Kitaichi Venetian Art Museum</p>
+      <p class="hero-lead">千年の歴史を持つ<br>ヴェネツィアガラスに、<br>小樽の街で出会う。</p>
+      <a class="hero-cta" href="#access">アクセスを見る</a>
+    </div>
+    <h1 class="hero-title">北一ヴェネツィア美術館</h1>
+  </div>
+</header>
+
+<main>
+
+<section class="about" id="about">
+  <div class="wrap wide">
+    <span class="lozenge" aria-hidden="true"></span>
+    <h2>ヴェネツィアの光を、<br>小樽へ。</h2>
+    <div class="about-grid">
+      <div class="arch frame">
+        <img src="images/2.jpg" alt="黒いベルベットの上に置かれた、レースガラスのゴブレットのクローズアップ" width="800" height="1000" loading="lazy">
+      </div>
+      <div class="about-text">
+        <p>北一ヴェネツィア美術館は、イタリア・ヴェネツィアの文化とヴェネツィアガラスを紹介し、守り伝えることを目的に、1988年に設立されました。</p>
+        <p>ヴェネツィアのガラス工房や多くの作家が設立の趣旨に賛同。1000年の歴史を持つヴェネツィアガラスの高い技術と芸術性を伝える、約3000点の作品や家具調度品を収蔵・展示しています。</p>
+        <dl class="about-facts">
+          <div><dt>設立</dt><dd>1988<small>年</small></dd></div>
+          <div><dt>収蔵・展示</dt><dd>約3000<small>点</small></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="strength" id="strength">
+  <div class="wrap wide">
+    <span class="lozenge" aria-hidden="true"></span>
+    <h2>この美術館ならではの魅力</h2>
+    <figure class="strength-photo frame" style="margin-left:0;margin-right:0">
+      <img src="images/3.jpg" alt="シャンデリアが灯る、ヴェネツィアガラスを展示した館内のギャラリー" width="1500" height="1000" loading="lazy">
+    </figure>
+    <ul class="points">
+      <li>
+        <h3>ガラス工芸を体系的に鑑賞</h3>
+        <p>ヴェネツィアの伝統的なガラス工芸の美術作品を、流れに沿ってじっくりと鑑賞できます。</p>
+      </li>
+      <li>
+        <h3>多彩な作品を間近に</h3>
+        <p>手作りのガラスペンやアクセサリー、華やかなカーニバルマスク、金彩グラスなど、さまざまなジャンルの作品を近くで楽しめます。</p>
+      </li>
+      <li>
+        <h3>工房直輸入のミュージアムショップ</h3>
+        <p>館内のショップには、ヴェネツィアの工房から直接届いたアイテムが揃います。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="recommend" id="recommend">
+  <div class="wrap">
+    <span class="lozenge" aria-hidden="true"></span>
+    <h2>イチオシの展示</h2>
+    <p class="big">16〜18世紀を中心に、<br>歴史ある工芸品から<br>現代作家の秀作まで。</p>
+    <p>多様なヴェネツィアガラスを展示。伝説的な技法として知られる「レースガラス」や、「ムラノガラス」の逸品を間近でご覧いただけます。</p>
+    <ul class="tags" aria-label="見どころ">
+      <li>レースガラス</li>
+      <li>ムラノガラス</li>
+      <li>金彩グラス</li>
+      <li>カーニバルマスク</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <span class="lozenge" aria-hidden="true"></span>
+    <h2>ご来館者の声</h2>
+
+    <figure class="review" style="margin-left:0;margin-right:0">
+      <p class="stars" aria-label="5段階評価で4"><span aria-hidden="true">★★★★<span class="off">★</span></span></p>
+      <blockquote>
+        <p>美術品には疎い私ですが、それでも入館料以上の価値がありました。</p>
+        <p>当時のヴェネツィア貴族の生活が垣間見える展示品（大量の食器類や鏡、絵画（フレスコ画も少々）等）が飾られていて、とても上品で綺麗でした。私が行ったときは3Fでヴェネツィアガラスの巨匠作品が展示されてましたが、ここは期間限定で年に数回作品の入れ替えがあるようです。</p>
+        <p>1F以外撮影不可なのが些か残念ですが、小樽に来た際は一度は訪れてみてもいいかもしれません。</p>
+      </blockquote>
+    </figure>
+
+    <figure class="review" style="margin-left:0;margin-right:0">
+      <p class="stars" aria-label="5段階評価で5"><span aria-hidden="true">★★★★★</span></p>
+      <blockquote>
+        <p>ダイアナ妃が乗られたゴンドラはチケットを買えば見に行けます。</p>
+        <p>様々な貴族のものが展示されており、チケットも安価なのでぜひ行ってみてください。</p>
+        <p>内部は撮影不可です。</p>
+      </blockquote>
+    </figure>
+
+    <p class="review-note">※ご来館者の口コミです。展示内容は変わることがあります。</p>
+  </div>
+</section>
+
+<section class="info" id="info">
+  <div class="wrap">
+    <span class="lozenge" aria-hidden="true"></span>
+    <h2>施設案内</h2>
+    <dl class="info-list">
+      <div><dt>施設名</dt><dd>北一ヴェネツィア美術館</dd></div>
+      <div><dt>住所</dt><dd>北海道小樽市堺町5-27</dd></div>
+      <div><dt>定休日</dt><dd>無休</dd></div>
+      <div><dt>電話</dt><dd><a class="tel" href="tel:0134331717">0134-33-1717</a></dd></div>
+      <div><dt>メール</dt><dd><a href="mailto:venezia-museum@kitaichiglass.co.jp"><span class="mail">venezia-museum<wbr>@kitaichiglass.co.jp</span></a></dd></div>
+      <div><dt>公式サイト</dt><dd><a href="https://venezia-museum.or.jp/" target="_blank" rel="noopener">venezia-museum.or.jp</a></dd></div>
+    </dl>
+    <p class="note">開館時間・入館料・展示内容・撮影のルールは、お出かけ前に公式サイトでご確認ください。</p>
+  </div>
+</section>
+
+<section class="access" id="access">
+  <div class="wrap">
+    <span class="lozenge" aria-hidden="true"></span>
+    <h2>アクセス</h2>
+    <p class="addr">北海道小樽市堺町5-27</p>
+    <div class="map frame">
+      <iframe
+        title="北一ヴェネツィア美術館の地図"
+        src="https://www.google.com/maps?q=%E5%8C%97%E6%B5%B7%E9%81%93%E5%B0%8F%E6%A8%BD%E5%B8%82%E5%A0%BA%E7%94%BA5-27%20%E5%8C%97%E4%B8%80%E3%83%B4%E3%82%A7%E3%83%8D%E3%83%84%E3%82%A3%E3%82%A2%E7%BE%8E%E8%A1%93%E9%A4%A8&output=embed&hl=ja"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <a class="map-btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8C%97%E6%B5%B7%E9%81%93%E5%B0%8F%E6%A8%BD%E5%B8%82%E5%A0%BA%E7%94%BA5-27%20%E5%8C%97%E4%B8%80%E3%83%B4%E3%82%A7%E3%83%8D%E3%83%84%E3%82%A3%E3%82%A2%E7%BE%8E%E8%A1%93%E9%A4%A8" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      Googleマップで地図を開く
+    </a>
+    <div class="links">
+      <a href="tel:0134331717">電話で問い合わせる</a>
+      <a href="https://venezia-museum.or.jp/" target="_blank" rel="noopener">公式サイトを見る</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="f-name">北一ヴェネツィア美術館</p>
+  <p class="f-latin">Kitaichi Venetian Art Museum</p>
+  <div class="sns">
+    <a href="https://www.instagram.com/k_venetian_art_museum/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+    </a>
+  </div>
+  <p class="copy">北海道小樽市堺町5-27</p>
+</footer>
+
+</body>
+</html>
